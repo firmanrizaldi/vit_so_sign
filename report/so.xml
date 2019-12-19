@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <template id="vit_so_sign" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//div[@class='oe_structure'][last()]" position="after">
+                <table class="table">
+                    <tr>
+                        <td>Created By</td>
+                        <td>Validated By</td>
+                        <td>Received By</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:3cm">
+                            <span t-field="doc.user_id"/>
+                        </td>
+                        <td style="padding-top:3cm">
+                            <span t-field="doc.validated_id"/>
+                        </td>
+                        <td style="padding-top:3cm">
+                            .................
+                        </td>
+                    </tr>
+                </table>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
